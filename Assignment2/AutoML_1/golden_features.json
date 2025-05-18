@@ -1,0 +1,77 @@
+{
+    "new_features": [
+        {
+            "feature1": "Turbidity",
+            "feature2": "Trihalomethanes",
+            "operation": "sum",
+            "score": 0.6799667916
+        },
+        {
+            "feature1": "Chloramines",
+            "feature2": "Hardness",
+            "operation": "sum",
+            "score": 0.7131843226
+        },
+        {
+            "feature1": "Conductivity",
+            "feature2": "Trihalomethanes",
+            "operation": "diff",
+            "score": 0.7139017373
+        },
+        {
+            "feature1": "Sulfate",
+            "feature2": "Turbidity",
+            "operation": "ratio",
+            "score": 0.7191052732
+        },
+        {
+            "feature1": "Turbidity",
+            "feature2": "Sulfate",
+            "operation": "ratio",
+            "score": 0.7191052732
+        },
+        {
+            "feature1": "Hardness",
+            "feature2": "Organic_carbon",
+            "operation": "diff",
+            "score": 0.727926436
+        },
+        {
+            "feature1": "ph",
+            "feature2": "Trihalomethanes",
+            "operation": "diff",
+            "score": 0.7294226434
+        },
+        {
+            "feature1": "Trihalomethanes",
+            "feature2": "Sulfate",
+            "operation": "multiply",
+            "score": 0.7421790146
+        },
+        {
+            "feature1": "Conductivity",
+            "feature2": "Hardness",
+            "operation": "multiply",
+            "score": 0.7620416788
+        },
+        {
+            "feature1": "Trihalomethanes",
+            "feature2": "Chloramines",
+            "operation": "multiply",
+            "score": 0.7650725867
+        }
+    ],
+    "new_columns": [
+        "Turbidity_sum_Trihalomethanes",
+        "Chloramines_sum_Hardness",
+        "Conductivity_diff_Trihalomethanes",
+        "Sulfate_ratio_Turbidity",
+        "Turbidity_ratio_Sulfate",
+        "Hardness_diff_Organic_carbon",
+        "ph_diff_Trihalomethanes",
+        "Trihalomethanes_multiply_Sulfate",
+        "Conductivity_multiply_Hardness",
+        "Trihalomethanes_multiply_Chloramines"
+    ],
+    "ml_task": "binary_classification"
+}

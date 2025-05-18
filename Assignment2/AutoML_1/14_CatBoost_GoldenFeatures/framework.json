@@ -1,0 +1,749 @@
+{
+    "uid": "d5e272e2-d312-4513-981e-29e779122a6c",
+    "name": "14_CatBoost_GoldenFeatures",
+    "preprocessing": [
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "ph": 7.076062725165778,
+                        "Sulfate": 333.47759195071524,
+                        "Trihalomethanes": 66.68838419391717
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "sum",
+                        "score": 0.6799667916
+                    },
+                    {
+                        "feature1": "Chloramines",
+                        "feature2": "Hardness",
+                        "operation": "sum",
+                        "score": 0.7131843226
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7139017373
+                    },
+                    {
+                        "feature1": "Sulfate",
+                        "feature2": "Turbidity",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Sulfate",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Hardness",
+                        "feature2": "Organic_carbon",
+                        "operation": "diff",
+                        "score": 0.727926436
+                    },
+                    {
+                        "feature1": "ph",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7294226434
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Sulfate",
+                        "operation": "multiply",
+                        "score": 0.7421790146
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Hardness",
+                        "operation": "multiply",
+                        "score": 0.7620416788
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Chloramines",
+                        "operation": "multiply",
+                        "score": 0.7650725867
+                    }
+                ],
+                "new_columns": [
+                    "Turbidity_sum_Trihalomethanes",
+                    "Chloramines_sum_Hardness",
+                    "Conductivity_diff_Trihalomethanes",
+                    "Sulfate_ratio_Turbidity",
+                    "Turbidity_ratio_Sulfate",
+                    "Hardness_diff_Organic_carbon",
+                    "ph_diff_Trihalomethanes",
+                    "Trihalomethanes_multiply_Sulfate",
+                    "Conductivity_multiply_Hardness",
+                    "Trihalomethanes_multiply_Chloramines"
+                ],
+                "ml_task": "binary_classification"
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "ph": [
+                        "na_fill_median"
+                    ],
+                    "Sulfate": [
+                        "na_fill_median"
+                    ],
+                    "Trihalomethanes": [
+                        "na_fill_median"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "golden_features": {
+                    "results_path": "AutoML_1",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1
+                }
+            }
+        },
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "ph": 7.038593313321366,
+                        "Sulfate": 334.0274201302968,
+                        "Trihalomethanes": 66.1101333491017
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "sum",
+                        "score": 0.6799667916
+                    },
+                    {
+                        "feature1": "Chloramines",
+                        "feature2": "Hardness",
+                        "operation": "sum",
+                        "score": 0.7131843226
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7139017373
+                    },
+                    {
+                        "feature1": "Sulfate",
+                        "feature2": "Turbidity",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Sulfate",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Hardness",
+                        "feature2": "Organic_carbon",
+                        "operation": "diff",
+                        "score": 0.727926436
+                    },
+                    {
+                        "feature1": "ph",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7294226434
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Sulfate",
+                        "operation": "multiply",
+                        "score": 0.7421790146
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Hardness",
+                        "operation": "multiply",
+                        "score": 0.7620416788
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Chloramines",
+                        "operation": "multiply",
+                        "score": 0.7650725867
+                    }
+                ],
+                "new_columns": [
+                    "Turbidity_sum_Trihalomethanes",
+                    "Chloramines_sum_Hardness",
+                    "Conductivity_diff_Trihalomethanes",
+                    "Sulfate_ratio_Turbidity",
+                    "Turbidity_ratio_Sulfate",
+                    "Hardness_diff_Organic_carbon",
+                    "ph_diff_Trihalomethanes",
+                    "Trihalomethanes_multiply_Sulfate",
+                    "Conductivity_multiply_Hardness",
+                    "Trihalomethanes_multiply_Chloramines"
+                ],
+                "ml_task": "binary_classification"
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "ph": [
+                        "na_fill_median"
+                    ],
+                    "Sulfate": [
+                        "na_fill_median"
+                    ],
+                    "Trihalomethanes": [
+                        "na_fill_median"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "golden_features": {
+                    "results_path": "AutoML_1",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1
+                }
+            }
+        },
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "ph": 7.044671207246086,
+                        "Sulfate": 333.2802932078423,
+                        "Trihalomethanes": 66.15489717814674
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "sum",
+                        "score": 0.6799667916
+                    },
+                    {
+                        "feature1": "Chloramines",
+                        "feature2": "Hardness",
+                        "operation": "sum",
+                        "score": 0.7131843226
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7139017373
+                    },
+                    {
+                        "feature1": "Sulfate",
+                        "feature2": "Turbidity",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Sulfate",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Hardness",
+                        "feature2": "Organic_carbon",
+                        "operation": "diff",
+                        "score": 0.727926436
+                    },
+                    {
+                        "feature1": "ph",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7294226434
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Sulfate",
+                        "operation": "multiply",
+                        "score": 0.7421790146
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Hardness",
+                        "operation": "multiply",
+                        "score": 0.7620416788
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Chloramines",
+                        "operation": "multiply",
+                        "score": 0.7650725867
+                    }
+                ],
+                "new_columns": [
+                    "Turbidity_sum_Trihalomethanes",
+                    "Chloramines_sum_Hardness",
+                    "Conductivity_diff_Trihalomethanes",
+                    "Sulfate_ratio_Turbidity",
+                    "Turbidity_ratio_Sulfate",
+                    "Hardness_diff_Organic_carbon",
+                    "ph_diff_Trihalomethanes",
+                    "Trihalomethanes_multiply_Sulfate",
+                    "Conductivity_multiply_Hardness",
+                    "Trihalomethanes_multiply_Chloramines"
+                ],
+                "ml_task": "binary_classification"
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "ph": [
+                        "na_fill_median"
+                    ],
+                    "Sulfate": [
+                        "na_fill_median"
+                    ],
+                    "Trihalomethanes": [
+                        "na_fill_median"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "golden_features": {
+                    "results_path": "AutoML_1",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1
+                }
+            }
+        },
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "ph": 7.026400597647794,
+                        "Sulfate": 333.1194758732444,
+                        "Trihalomethanes": 66.08107583624967
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "sum",
+                        "score": 0.6799667916
+                    },
+                    {
+                        "feature1": "Chloramines",
+                        "feature2": "Hardness",
+                        "operation": "sum",
+                        "score": 0.7131843226
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7139017373
+                    },
+                    {
+                        "feature1": "Sulfate",
+                        "feature2": "Turbidity",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Sulfate",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Hardness",
+                        "feature2": "Organic_carbon",
+                        "operation": "diff",
+                        "score": 0.727926436
+                    },
+                    {
+                        "feature1": "ph",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7294226434
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Sulfate",
+                        "operation": "multiply",
+                        "score": 0.7421790146
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Hardness",
+                        "operation": "multiply",
+                        "score": 0.7620416788
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Chloramines",
+                        "operation": "multiply",
+                        "score": 0.7650725867
+                    }
+                ],
+                "new_columns": [
+                    "Turbidity_sum_Trihalomethanes",
+                    "Chloramines_sum_Hardness",
+                    "Conductivity_diff_Trihalomethanes",
+                    "Sulfate_ratio_Turbidity",
+                    "Turbidity_ratio_Sulfate",
+                    "Hardness_diff_Organic_carbon",
+                    "ph_diff_Trihalomethanes",
+                    "Trihalomethanes_multiply_Sulfate",
+                    "Conductivity_multiply_Hardness",
+                    "Trihalomethanes_multiply_Chloramines"
+                ],
+                "ml_task": "binary_classification"
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "ph": [
+                        "na_fill_median"
+                    ],
+                    "Sulfate": [
+                        "na_fill_median"
+                    ],
+                    "Trihalomethanes": [
+                        "na_fill_median"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "golden_features": {
+                    "results_path": "AutoML_1",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1
+                }
+            }
+        },
+        {
+            "missing_values": [
+                {
+                    "fill_method": "na_fill_median",
+                    "fill_params": {
+                        "ph": 7.052256582562012,
+                        "Sulfate": 334.05369272449525,
+                        "Trihalomethanes": 66.6210265451665
+                    },
+                    "datetime_columns": []
+                }
+            ],
+            "golden_features": {
+                "new_features": [
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "sum",
+                        "score": 0.6799667916
+                    },
+                    {
+                        "feature1": "Chloramines",
+                        "feature2": "Hardness",
+                        "operation": "sum",
+                        "score": 0.7131843226
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7139017373
+                    },
+                    {
+                        "feature1": "Sulfate",
+                        "feature2": "Turbidity",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Turbidity",
+                        "feature2": "Sulfate",
+                        "operation": "ratio",
+                        "score": 0.7191052732
+                    },
+                    {
+                        "feature1": "Hardness",
+                        "feature2": "Organic_carbon",
+                        "operation": "diff",
+                        "score": 0.727926436
+                    },
+                    {
+                        "feature1": "ph",
+                        "feature2": "Trihalomethanes",
+                        "operation": "diff",
+                        "score": 0.7294226434
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Sulfate",
+                        "operation": "multiply",
+                        "score": 0.7421790146
+                    },
+                    {
+                        "feature1": "Conductivity",
+                        "feature2": "Hardness",
+                        "operation": "multiply",
+                        "score": 0.7620416788
+                    },
+                    {
+                        "feature1": "Trihalomethanes",
+                        "feature2": "Chloramines",
+                        "operation": "multiply",
+                        "score": 0.7650725867
+                    }
+                ],
+                "new_columns": [
+                    "Turbidity_sum_Trihalomethanes",
+                    "Chloramines_sum_Hardness",
+                    "Conductivity_diff_Trihalomethanes",
+                    "Sulfate_ratio_Turbidity",
+                    "Turbidity_ratio_Sulfate",
+                    "Hardness_diff_Organic_carbon",
+                    "ph_diff_Trihalomethanes",
+                    "Trihalomethanes_multiply_Sulfate",
+                    "Conductivity_multiply_Hardness",
+                    "Trihalomethanes_multiply_Chloramines"
+                ],
+                "ml_task": "binary_classification"
+            },
+            "ml_task": "binary_classification",
+            "params": {
+                "columns_preprocessing": {
+                    "ph": [
+                        "na_fill_median"
+                    ],
+                    "Sulfate": [
+                        "na_fill_median"
+                    ],
+                    "Trihalomethanes": [
+                        "na_fill_median"
+                    ]
+                },
+                "target_preprocessing": [
+                    "na_exclude"
+                ],
+                "ml_task": "binary_classification",
+                "golden_features": {
+                    "results_path": "AutoML_1",
+                    "ml_task": "binary_classification",
+                    "n_jobs": -1
+                }
+            }
+        }
+    ],
+    "learners": [
+        {
+            "library_version": "1.2.8",
+            "algorithm_name": "CatBoost",
+            "algorithm_short_name": "CatBoost",
+            "uid": "9d190919-4de0-4718-b307-d7f0acfd7249",
+            "params": {
+                "model_type": "CatBoost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "learning_rate": 0.05,
+                "depth": 8,
+                "rsm": 0.8,
+                "loss_function": "Logloss",
+                "eval_metric": "F1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_0",
+            "best_ntree_limit": 16
+        },
+        {
+            "library_version": "1.2.8",
+            "algorithm_name": "CatBoost",
+            "algorithm_short_name": "CatBoost",
+            "uid": "f6771994-1f08-4f77-b3fc-2de32b21b6c6",
+            "params": {
+                "model_type": "CatBoost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "learning_rate": 0.05,
+                "depth": 8,
+                "rsm": 0.8,
+                "loss_function": "Logloss",
+                "eval_metric": "F1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_1",
+            "best_ntree_limit": 47
+        },
+        {
+            "library_version": "1.2.8",
+            "algorithm_name": "CatBoost",
+            "algorithm_short_name": "CatBoost",
+            "uid": "8d17a154-26f9-4ccb-a27c-ae14e9397278",
+            "params": {
+                "model_type": "CatBoost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "learning_rate": 0.05,
+                "depth": 8,
+                "rsm": 0.8,
+                "loss_function": "Logloss",
+                "eval_metric": "F1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_2",
+            "best_ntree_limit": 50
+        },
+        {
+            "library_version": "1.2.8",
+            "algorithm_name": "CatBoost",
+            "algorithm_short_name": "CatBoost",
+            "uid": "22e19516-812a-4853-a698-3168059bc60c",
+            "params": {
+                "model_type": "CatBoost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "learning_rate": 0.05,
+                "depth": 8,
+                "rsm": 0.8,
+                "loss_function": "Logloss",
+                "eval_metric": "F1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_3",
+            "best_ntree_limit": 59
+        },
+        {
+            "library_version": "1.2.8",
+            "algorithm_name": "CatBoost",
+            "algorithm_short_name": "CatBoost",
+            "uid": "d435ddd4-d4ca-4e6a-994b-49bd75e57cbb",
+            "params": {
+                "model_type": "CatBoost",
+                "ml_task": "binary_classification",
+                "n_jobs": -1,
+                "seed": 1235,
+                "learning_rate": 0.05,
+                "depth": 8,
+                "rsm": 0.8,
+                "loss_function": "Logloss",
+                "eval_metric": "F1",
+                "explain_level": 1
+            },
+            "name": "learner_fold_4",
+            "best_ntree_limit": 25
+        }
+    ],
+    "params": {
+        "additional": {
+            "max_rounds": 10000,
+            "early_stopping_rounds": 50,
+            "max_rows_limit": null,
+            "max_cols_limit": null
+        },
+        "preprocessing": {
+            "columns_preprocessing": {
+                "ph": [
+                    "na_fill_median"
+                ],
+                "Sulfate": [
+                    "na_fill_median"
+                ],
+                "Trihalomethanes": [
+                    "na_fill_median"
+                ]
+            },
+            "target_preprocessing": [
+                "na_exclude"
+            ],
+            "ml_task": "binary_classification",
+            "golden_features": {
+                "results_path": "AutoML_1",
+                "ml_task": "binary_classification",
+                "n_jobs": -1
+            }
+        },
+        "validation_strategy": {
+            "validation_type": "kfold",
+            "k_folds": 5,
+            "shuffle": true,
+            "stratify": true,
+            "random_seed": 1234,
+            "X_path": "AutoML_1/X.data",
+            "y_path": "AutoML_1/y.data",
+            "results_path": "AutoML_1"
+        },
+        "learner": {
+            "model_type": "CatBoost",
+            "ml_task": "binary_classification",
+            "n_jobs": -1,
+            "seed": 1235,
+            "learning_rate": 0.05,
+            "depth": 8,
+            "rsm": 0.8,
+            "loss_function": "Logloss",
+            "eval_metric": "F1",
+            "explain_level": 1
+        },
+        "automl_random_state": 1234,
+        "ml_task": "binary_classification",
+        "explain_level": 1,
+        "name": "14_CatBoost_GoldenFeatures",
+        "status": "initialized",
+        "final_loss": null,
+        "train_time": null,
+        "data_type": "original_golden_features",
+        "max_time_for_learner": 60
+    },
+    "saved": [
+        "14_CatBoost_GoldenFeatures/learner_fold_0.catboost",
+        "14_CatBoost_GoldenFeatures/learner_fold_1.catboost",
+        "14_CatBoost_GoldenFeatures/learner_fold_2.catboost",
+        "14_CatBoost_GoldenFeatures/learner_fold_3.catboost",
+        "14_CatBoost_GoldenFeatures/learner_fold_4.catboost"
+    ],
+    "predictions_fname": "14_CatBoost_GoldenFeatures/predictions_out_of_folds.csv",
+    "metric_name": "f1",
+    "final_loss": "-0.7780308782586687",
+    "train_time": 12.798923969268799,
+    "is_stacked": false,
+    "joblib_version": "1.5.0",
+    "threshold": 0.5047049007776558,
+    "single_prediction_time": 0.09144186973571777
+}
